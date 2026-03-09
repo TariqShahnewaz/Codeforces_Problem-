@@ -12,9 +12,9 @@ void coloring(){
          count += (a[i]%2 != (i+1)%2);
     }
     if(count == n)
-        cout<<"Yes";
+        cout<<"Yes\n";
     else
-        cout<<"No";
+        cout<<"No\n";
 }
 int main(){
     int t;
