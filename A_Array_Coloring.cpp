@@ -1,31 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
+void coloring(){
+    int n;
+    cin>>n;
+    vector<int> a(n);
+    for(int i =0; i<n; i++){ 
+        cin>>a[i];
+    }
+    int count = 0;
+    for(int i =0; i<n; i++){
+         count += (a[i]%2 != (i+1)%2);
+    }
+    if(count == n)
+        cout<<"Yes";
+    else
+        cout<<"No";
+}
 int main(){
     int t;
     cin>>t;
-    int n;
-    cin>>n;
-    int arr[n];
     while(t--){
-        for(int i =0; i<n; i++){
-            cin>>arr[i];
-        }
-        sort(arr, arr+n);
-        bool check = false;
-        for(int i =0; i<n; i++){
-            if(arr[i]!=arr[i+1]){
-                check = true;
-                break;
-            }
-            
-        }
-        if(check){
-            cout<<"Yes\n";
-        }else{
-            cout<<"No\n";
-        }
-        
+        coloring();
     }
-    
-    return 0;
+return 0;
 }
