@@ -10,7 +10,7 @@ void passing_ball(){
         visited[current] = 1;
 
         for (int i = 0; i < n; i++) {
-            if (s[current - 1] == 'R') current++;
+            if (s[current - 1] == 'R') current++;                                             
             else current--;
 
             visited[current] = 1;
@@ -35,3 +35,19 @@ int main() {
     }
     return 0;
 }
+// using namespace std;
+ 
+// int main()
+// {
+//     int t;
+//     cin >> t;
+//     for(int i = 0; i < t; i++)
+//     {
+//         int n;
+//         cin >> n;
+//         string s;
+//         cin >> s;             
+//         cout << s.find("RL") + 2 << endl;
+//     }
+//     return 0;
+// }
